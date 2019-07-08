@@ -1,0 +1,56 @@
+.app-cont {
+  background: url("../assets/images/mickCover1.jpg") no-repeat center center fixed ;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+
+  .intro-cont {
+    display: flex;
+    margin: 0 40px;
+    height: 100vh;
+    position: relative;
+    font-family: 'Saira Extra Condensed', sans-serif;
+
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 350px;
+      left: 166px;
+      color: #505160;
+      text-align: center;
+      opacity: 0.7;
+      background: white;
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 2px 3px 8px 6px;
+
+      .name {
+        font-size: 40px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .app-cont {
+    .intro-cont {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+
+      .intro {
+        position: absolute;
+        left: 0;
+        padding: 0;
+        top: 100px;
+        display: none;
+      }
+    }
+  }
+}
+
+

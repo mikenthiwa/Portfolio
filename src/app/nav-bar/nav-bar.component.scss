@@ -1,0 +1,72 @@
+$logoColor: #505160;
+$navItemsColor: rgb(11, 167, 224);
+.nav-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.4fr;
+  height: 55px;
+  align-items: end;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  background: white;
+  opacity: .8;
+  overflow: hidden;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+
+
+  .logo {
+    display: flex;
+    margin: auto 0 auto 40px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: 1px;
+    color: $logoColor;
+    cursor: pointer;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .logo:hover{
+    color: #2A3132;
+  }
+
+  .nav-items {
+    display: flex;
+    color: $navItemsColor;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    margin: auto 0;
+
+
+    .item{
+      padding-right: 30px;
+      font-size: 16px;
+      span {
+        position: relative;
+        cursor: pointer;
+        border-bottom: 2px;
+        opacity: .9;
+        transition: all .3s;
+
+        &:after {
+          content: '';
+          background: #4B4345;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 0;
+          height: 1px;
+          transition: all .3s;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+        &:hover {
+          opacity: 1;
+          color: $logoColor;
+        }
+      }
+    }
+  }
+
+}
+
